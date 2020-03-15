@@ -1165,7 +1165,7 @@ input[type=radio] {
 }
 
 
-@media (max-height: 640px) {
+@media (max-height: 640px) and (max-width: 980px) {
     textarea {
         height: 40px;
     }
