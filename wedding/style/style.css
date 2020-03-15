@@ -558,6 +558,7 @@ body {
 
 .section4>div:last-child > p{
     font-size: 20pt;
+    z-index: 2;
 }
 
 
