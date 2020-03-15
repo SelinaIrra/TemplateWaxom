@@ -41,8 +41,8 @@
                                 <p> Мы хотим пригласить Вас в увлекательное
                                     путешествие, с которого начнется наша счастливая
                                     и долгая семейная жизнь!
-                                    <br>
-                                    <br>
+                                    <br style="display: block !important">
+                                    <br style="display: block !important">
                                     Да, да! Слава и Таня женятся! Это правда.
                                     По такому поводу и праздник будет соответствующим,
                                     поэтому мы будем очень рады Вас видеть!</p>
@@ -284,7 +284,7 @@
     </div>
 </body>
 <script>
-    if (document.body.offsetWidth > document.body.offsetHeight) {
+    // if (document.body.offsetWidth > document.body.offsetHeight) {
         onePageScroll(".container", {
             sectionContainer: "section",
             loop: true,
@@ -302,7 +302,7 @@
                     });
                 }
             }, 
-        });
+        });/* 
     } else {
         $('section').each((index, el) => {
             el.classList.add("mobSection");
@@ -316,7 +316,7 @@
             slideshow: true,
             slideshowSpeed: 10000,
         });
-    }
+    } */
     
 </script>
 </body>
