@@ -999,6 +999,10 @@ input[type=radio] {
     font-size: 15pt;
 }
 
+.mobSection .flowersSection {
+    margin-top: 150px;
+}
+
 @media (max-height: 800px) {
     .mobSection {
         height: 400px;
