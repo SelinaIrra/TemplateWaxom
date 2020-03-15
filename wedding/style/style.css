@@ -996,7 +996,7 @@ input[type=radio] {
 }
 
 .mobSection .flowersSection>div:nth-child(2) {
-    font-size: 11pt;
+    font-size: 15pt;
 }
 
 @media (max-height: 800px) {
