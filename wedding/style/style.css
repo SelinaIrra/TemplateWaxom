@@ -624,6 +624,8 @@ textarea {
     padding: 3px;
     outline: none;
     text-decoration: none;
+    overflow-y: auto;
+    resize: none;
 }
 
 .form {
