@@ -824,6 +824,11 @@ input[type=radio] {
         margin-left: calc(50% - 850px);
         box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12)
     }
+
+    .count {
+        bottom: 5px;
+    }
+
     body {
         background-color: rgba(235, 236, 236, 0.2);
     }
