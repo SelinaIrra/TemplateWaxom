@@ -110,7 +110,7 @@ function send() {
     }
     $.ajax({
         type: "POST",
-        url: "/",
+        url: "/submit",
         data: JSON.stringify(inf),
         contentType: "application/json",
         success: function () {
