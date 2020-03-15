@@ -96,7 +96,7 @@ function send() {
             return;
         }
         if (!inf.guestsNames) {
-            $("#fio2").notify("Пожалуйста, укажите имя вашего спутника/спутников", { autoHideDelay: 4000, className: 'warning' });
+            $("#fio2").notify("Пожалуйста, укажите имя спутника/спутников", { autoHideDelay: 4000, className: 'warning' });
             return;
         }
         if (!inf.food || inf.food == 'Сделайте выбор') {
@@ -117,7 +117,7 @@ function send() {
             $('footer').slideDown(1500, "linear");
         },
         error: function () {
-            $("#sendbtn").notify("Извините, возникли ошибки. Пожалуйста, свяжитесь с нами", { position: '...', autoHideDelay: 10000 });
+            $("#sendbtn").notify("Возникли ошибки, \n свяжитесь с нами", { autoHideDelay: 10000 });
         }
     });
     console.log(inf)
