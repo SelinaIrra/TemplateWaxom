@@ -362,7 +362,7 @@ body {
     padding: 40px 20vw;
     font-family: 'Poiret One', cursive; 
     font-weight: 600;
-    font-size: 14pt;
+    font-size: 12pt;
 } 
 
 .flowersSection>div:last-child {
@@ -864,7 +864,7 @@ input[type=radio] {
         padding: 40px 20vw;
         font-family: 'Poiret One', cursive;
         font-weight: 600;
-        font-size: 20pt;
+        font-size: 15pt;
     }
     .flowersSection>div:last-child {
         background-image: url(./img/linerFlowerB.png);
@@ -996,7 +996,7 @@ input[type=radio] {
 }
 
 .mobSection .flowersSection>div:nth-child(2) {
-    font-size: 13pt;
+    font-size: 12pt;
 }
 
 @media (max-height: 800px) {
