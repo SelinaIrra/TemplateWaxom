@@ -1120,7 +1120,7 @@ input[type=radio] {
         align-items: center;
         background-image: url(./img/linerF.png);
         background-position: center;
-        background-size: contain;
+        background-size: top;
         background-repeat: no-repeat;
         flex-grow: 1;
     }
