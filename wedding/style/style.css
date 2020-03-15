@@ -964,6 +964,7 @@ input[type=radio] {
         width: 80% !important;
     margin-top: 20px !important;
     margin-left: 10% !important;
+    height: 50vh !important;
     }
 
     .dress, .hugs  {
@@ -971,7 +972,7 @@ input[type=radio] {
         width: 80%;
         left: 10%;
         margin-top: 5%;
-        height: 300px;
+        height: 50vh !important;
     }
 
     .slidesblock {
@@ -981,6 +982,7 @@ input[type=radio] {
         flex-direction: column;
         font-family: 'Poiret One', cursive;
         font-weight: 600;
+        font-size: 2vh;
         color: #4f4f4f;
     }
 
@@ -989,15 +991,15 @@ input[type=radio] {
     }
 
     .blocktitle{
-        font-size: 16pt;
+        font-size: 3vh;
     }
 
     .journey p {
-        font-size: 16pt;
+        font-size: 3vh;
     }
 
     .section4>div:last-child > p {
-        font-size: 16pt;
+        font-size: 3vh;
         z-index: 2;
     }
 
@@ -1053,7 +1055,7 @@ input[type=radio] {
         bottom: 25px;
         width: 60px;
         text-align: center;
-        font-size: 20pt;
+        font-size: 4vh;
         left: 0;
         margin: 0!important;
         margin-left: 0;
@@ -1068,18 +1070,24 @@ input[type=radio] {
     }
 
     input, textarea {
-        font-size: 8pt;
+        font-size: 1.9vh;
+    }
+
+    .flexslider {
+        margin: 0 0 40px !important;
     }
 
     button {
-        font-size: 10pt;
+        font-size: 2vh;
     }
 
     .form {
-        font-size: 8pt;
+        font-size: 1.8vh;
         max-width: 90%; 
         width: 90%;
         box-sizing: border-box;
+        margin-top: 20px;
+        border: 2vh solid #BDD3E1;
     }
 
     .flowersSection>div:first-child {
@@ -1094,7 +1102,7 @@ input[type=radio] {
         padding: 30px;
         font-family: 'Poiret One', cursive;
         font-weight: 600;
-        font-size: 10pt;
+        font-size: 2vh;
     }
 
     .section2>div:first-child>div {
@@ -1122,6 +1130,7 @@ input[type=radio] {
         width: 100%;
         height: 90%;
     }
+
     .infosection2 {
         position: absolute;
         z-index: 1;
@@ -1131,7 +1140,7 @@ input[type=radio] {
         padding: 20px 20px;
         font-family: 'Poiret One', cursive;
         font-weight: 600;
-        font-size: 10pt;
+        font-size: 2vh;
         color: #4f4f4f;
         box-sizing: border-box;
         background-color: white;
@@ -1140,7 +1149,7 @@ input[type=radio] {
     }
 
     .infosection2>p:first-child {
-        font-size: 16pt;
+        font-size: 3vh;
         padding-bottom: 30px;
     }
 
@@ -1155,6 +1164,30 @@ input[type=radio] {
     }
 }
 
+
+@media (max-height: 640px) {
+    textarea {
+        height: 40px;
+    }
+
+    .form {
+        font-size: 1.8vh;
+        max-width: 90%;
+        width: 90%;
+        max-height: 95%;
+    }
+
+    .custom-select {
+        line-height: 1.6;
+        height: 18px;
+    }
+
+    input {
+        height: 24px;
+    }
+
+
+}
 
 .mobSection {
     width: 100%;
