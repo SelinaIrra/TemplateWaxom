@@ -144,13 +144,13 @@ body {
     width: 424px;
     border: 30px solid #BDD3E1;
     border-left: 0;
-    padding: 50px 20px;
+    padding: 30px 20px;
     font-family: 'Poiret One', cursive;
     font-weight: 600;
     color: #4f4f4f;
     box-sizing: border-box;
     background-color: white;
-    margin-top: 63px;
+    margin-top: 66px;
 }
 
 .infosection2>p:first-child {
@@ -827,7 +827,7 @@ input[type=radio] {
         width: 596px;
         border: 30px solid #BDD3E1;
         border-left: 0;
-        padding: 50px 20px;
+        padding: 40px 20px;
         font-family: 'Poiret One', cursive;
         font-weight: 600;
         color: #4f4f4f;
