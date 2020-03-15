@@ -12,6 +12,7 @@
     <script src='scripts/onepagescroll.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="scripts/notify.min.js"></script>
+    <script src="scripts/flexslider.js"></script>
     <script src="scripts/func.js"></script>
 </head>
 
@@ -141,7 +142,7 @@
                     </div>
                     <div></div>
                 </div>
-                <div>
+                <div id="timer">
                         <p>Мы поженимся через</p>
                         <div id="countdown" class="countdown">
                             <div class="countdown-number">
@@ -281,24 +282,39 @@
         </div>
     </div>
 </body>
-<script defer src="scripts/flexslider.js"></script>
 <script>
-    onePageScroll(".container", {
-        sectionContainer: "section",
-        loop: true,
-        easing: "ease-out",
-        responsiveFallback: false,
-        updateURL: false,
-        beforeMove: function(index) {
-            if (index == 3) {
-                $('.flexslider').flexslider({
-                    animation: "slide",
-                    slideshow: true,
-                    slideshowSpeed: 10000,
-                });
-            }
-        }, 
-    });
+    if (document.body.offsetWidth > document.body.offsetHeight) {
+        onePageScroll(".container", {
+            sectionContainer: "section",
+            loop: true,
+            easing: "ease-out",
+            responsiveFallback: false,
+            updateURL: false,
+            beforeMove: function(index) {
+                if (index == 3) {
+                    $('.flexslider').flexslider({
+                        animation: "slide",
+                        slideshow: true,
+                        slideshowSpeed: 10000,
+                    });
+                }
+            }, 
+        });
+    } else {
+        $('section').each((index, el) => {
+            el.classList.add("mobSection");
+        })
+        $('html').css('overflow', 'auto');
+        $('html').css('height', 'auto');
+        $('body').css('overflow', 'auto');
+        $('body').css('height', 'auto');
+        $('.flexslider').flexslider({
+            animation: "slide",
+            slideshow: true,
+            slideshowSpeed: 10000,
+        });
+    }
+    
 </script>
 </body>
 
