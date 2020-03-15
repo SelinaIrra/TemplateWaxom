@@ -579,7 +579,7 @@ body {
 }
 
 footer {
-    background-color: rgba(235, 236, 236, 0.7);
+    background-color: rgb(235, 236, 236);
     padding: 20px;
     font-family: 'Open Sans Condensed', sans-serif; 
     font-size: 12pt;
