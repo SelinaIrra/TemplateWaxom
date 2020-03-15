@@ -117,7 +117,7 @@ function send() {
             $('footer').slideDown(1500, "linear");
         },
         error: function () {
-            $("#sendbtn").notify("Возникли ошибки, \n свяжитесь с нами", { autoHideDelay: 10000 });
+            $("#sendbtn").notify("Возникли ошибки, свяжитесь с нами", { autoHideDelay: 10000 });
         }
     });
     console.log(inf)

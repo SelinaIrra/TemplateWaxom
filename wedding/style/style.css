@@ -628,6 +628,15 @@ textarea {
     resize: none;
 }
 
+.notifyjs-foo-base {
+    opacity: 0.85;
+    width: 150px !important;
+    background: #F5F5F5;
+    padding: 5px;
+    border-radius: 10px;
+}
+  
+
 .form {
     font-size: 12pt;
     max-width: 500px;
