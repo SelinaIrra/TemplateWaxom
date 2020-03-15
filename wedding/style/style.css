@@ -996,7 +996,7 @@ input[type=radio] {
 }
 
 .mobSection .flowersSection>div:nth-child(2) {
-    font-size: 12pt;
+    font-size: 9pt;
 }
 
 @media (max-height: 800px) {
@@ -1004,4 +1004,14 @@ input[type=radio] {
         height: 400px;
     }
     
+}
+
+.flex-prev {
+    left: 10px !important;
+    opacity: 1 !important;
+}
+
+.flex-next {
+    opacity: 1 !important;
+    right: 10px !important;
 }
