@@ -834,7 +834,7 @@ input[type=radio] {
         box-sizing: border-box;
         background-color: white;
         margin-top: 164px;
-        font-size: 22pt;
+        font-size: 20pt;
         padding-bottom: 68px;
     }
 
@@ -888,7 +888,7 @@ input[type=radio] {
         margin-left: -5px;
     }
     .form {
-        font-size: 15pt;
+        font-size: 18pt;
         max-width: 700px;
         margin-top: 8%;
     }
@@ -901,14 +901,14 @@ input[type=radio] {
         text-decoration: none;
         width: calc(100% - 20px);
         font-family: 'Poiret One', cursive;
-        font-size: 15pt;
+        font-size: 16pt;
         font-weight: 600;
     }
     .form > * {
-        margin-top: 14px;
+        margin-top: 16px;
     }
     button {
-        font-size: 24pt;
+        font-size: 16pt;
         width: 130px;
         height: 44px;
     }
@@ -921,7 +921,7 @@ input[type=radio] {
     }
 
     .footername {
-        font-size: 24pt;
+        font-size: 22pt;
     }
 
 }
@@ -993,6 +993,10 @@ input[type=radio] {
 
 .mobSection .form {
     margin-top: 70px;
+}
+
+.mobSection .flowersSection>div:nth-child(2) {
+    font-size: 13pt;
 }
 
 @media (max-height: 800px) {
