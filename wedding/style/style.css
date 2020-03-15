@@ -1181,6 +1181,14 @@ input[type=radio] {
         background-repeat: no-repeat;
     }
 
+    .dress>div:first-child {
+        background-image: url(img/dresses1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+
     .liner { z-index: 4;}
 }
 
