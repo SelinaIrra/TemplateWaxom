@@ -1189,7 +1189,17 @@ input[type=radio] {
     }
     
 
-    .liner { z-index: 4;}
+    .liner { z-index: 4; }
+
+    .flex-prev {
+        left: 10px !important;
+        opacity: 1 !important;
+    }
+    
+    .flex-next {
+        opacity: 1 !important;
+        right: 10px !important;
+    }
 }
 
 
@@ -1243,11 +1253,11 @@ input[type=radio] {
 }
 
 .flex-prev {
-    left: 10px !important;
+    left: 5% !important;
     opacity: 1 !important;
 }
 
 .flex-next {
     opacity: 1 !important;
-    right: 10px !important;
+    right: 5% !important;
 }
