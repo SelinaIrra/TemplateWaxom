@@ -105,7 +105,7 @@ body {
 }
 
 .headername p:first-child{
-    font-size: 26px;
+    font-size: 26pt;
     padding-bottom: 16px;
     border-bottom: 1px solid #525050;
     text-shadow: 1px 1px 1px #0000001f;
@@ -154,7 +154,7 @@ body {
 }
 
 .infosection2>p:first-child {
-    font-size: 20px;
+    font-size: 18pt;
     padding-bottom: 30px;    
 }
 
@@ -253,7 +253,7 @@ body {
 
 .blocktitle {
     font-family: 'Bad Script', cursive; 
-    font-size: 30px;
+    font-size: 30pt;
     border-bottom: 1px solid #ebebee;
     padding-bottom: 8px;
     margin-bottom: 20px;
@@ -362,7 +362,7 @@ body {
     padding: 40px 20vw;
     font-family: 'Poiret One', cursive; 
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14pt;
 } 
 
 .flowersSection>div:last-child {
@@ -529,10 +529,10 @@ body {
 
 .count {
     position: absolute;
-    bottom: 110px;
+    bottom: 105px;
     width: 60px;
     text-align: center;
-    font-size: 30px;
+    font-size: 26pt;
     margin-left: -10px;
     font-family:  'Open Sans Condensed', sans-serif; 
 }
@@ -557,7 +557,7 @@ body {
 }
 
 .section4>div:last-child > p{
-    font-size: 20px;
+    font-size: 20pt;
 }
 
 
@@ -572,7 +572,7 @@ footer {
     background-color: rgba(235, 236, 236, 0.5);
     padding: 20px;
     font-family: 'Open Sans Condensed', sans-serif; 
-    font-size: 16px;
+    font-size: 12pt;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -586,7 +586,7 @@ footer {
 .footername {
     margin-top: 5px;
     font-family:  'Bad Script', cursive; 
-    font-size: 22px;
+    font-size: 15pt;
 }
 
 input {
@@ -598,7 +598,7 @@ input {
     text-decoration: none;
     width: calc(100% - 20px);
     font-family: 'Poiret One', cursive;
-    font-size: 16px;
+    font-size: 12pt;
     font-weight: 600;
 }
 
@@ -619,14 +619,14 @@ textarea {
     border-radius: 3px 5px;
     height: 80px;
     font-family: 'Poiret One', cursive;
-    font-size: 16px;
+    font-size: 12pt;
     padding: 3px;
     outline: none;
     text-decoration: none;
 }
 
 .form {
-    font-size: 15px;
+    font-size: 12pt;
     max-width: 500px;
 }
 
@@ -639,7 +639,7 @@ button {
     background-color: #BDD3E1;
     color: white;
     font-family:  'Bad Script', cursive; 
-    font-size: 18px;
+    font-size: 14pt;
     width: 100px;
     height: 30px;
 }
@@ -744,7 +744,7 @@ button:hover {
 
 
 .important {
-    font-size: 26px;
+    font-size: 26pt;
     position: absolute;
     margin-left: -13px;
     color: #BDD3E1
@@ -814,12 +814,12 @@ input[type=radio] {
         height: 772px;
     }
     .infosection2>p:first-child {
-        font-size: 28px;
+        font-size: 22pt;
         padding-bottom: 40px;
         padding-top: 12px;
     }
     .journey p {
-        font-size: 30px;
+        font-size: 30pt;
     }
     .infosection2 {
         position: absolute;
@@ -834,19 +834,16 @@ input[type=radio] {
         box-sizing: border-box;
         background-color: white;
         margin-top: 164px;
-        font-size: 22px;
+        font-size: 22pt;
         padding-bottom: 68px;
     }
 
     .slidesblock {
         margin: 20% 20px;
-        font-size: 24px;
+        font-size: 24pt;
     }
     .blocktitle {
-        font-size: 50px;
-    }
-    .flowersSection>div:nth-child(2) {
-        font-size: 22px;
+        font-size: 50pt;
     }
 
     .flowersSection {
@@ -867,7 +864,7 @@ input[type=radio] {
         padding: 40px 20vw;
         font-family: 'Poiret One', cursive;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 20pt;
     }
     .flowersSection>div:last-child {
         background-image: url(./img/linerFlowerB.png);
@@ -880,18 +877,18 @@ input[type=radio] {
         bottom: -225px;
     }
     .section4>div:last-child > p {
-        font-size: 24px;
+        font-size: 24pt;
     }
     .section4>div:last-child {
-        font-size: 20px;
+        font-size: 20pt;
     }
     .count {
         position: absolute;
-        bottom: 115px;
+        bottom: 110px;
         margin-left: -5px;
     }
     .form {
-        font-size: 20px;
+        font-size: 15pt;
         max-width: 700px;
         margin-top: 8%;
     }
@@ -904,27 +901,27 @@ input[type=radio] {
         text-decoration: none;
         width: calc(100% - 20px);
         font-family: 'Poiret One', cursive;
-        font-size: 22px;
+        font-size: 15pt;
         font-weight: 600;
     }
     .form > * {
         margin-top: 14px;
     }
     button {
-        font-size: 24px;
+        font-size: 24pt;
         width: 130px;
         height: 44px;
     }
     footer {
-        font-size: 18px;
+        font-size: 18pt;
     }
 
     .headername p:first-child {
-        font-size: 30px;
+        font-size: 30pt;
     }
 
     .footername {
-        font-size: 24px;
+        font-size: 24pt;
     }
 
 }
