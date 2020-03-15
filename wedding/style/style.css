@@ -527,25 +527,34 @@ body {
     }
   }
 
+.countdown-number {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 110px;
+    box-sizing: border-box;
+}
+
 .count {
-    position: absolute;
-    bottom: 105px;
+    position: relative;
+    bottom: 25px;
     width: 60px;
     text-align: center;
-    font-size: 26pt;
-    margin-left: -10px;
-    font-family:  'Open Sans Condensed', sans-serif; 
+    font-size: 4vh;
+    left: 0;
+    margin: 0!important;
+    margin-left: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .countdown {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.countdown-number {
-    margin: 20px
-}
 
 .section4>div:last-child {
     background-color: rgba(235, 236, 236, 0.4);
@@ -570,7 +579,7 @@ body {
 }
 
 footer {
-    background-color: rgba(235, 236, 236, 0.5);
+    background-color: rgba(235, 236, 236, 0.7);
     padding: 20px;
     font-family: 'Open Sans Condensed', sans-serif; 
     font-size: 12pt;
@@ -897,11 +906,6 @@ input[type=radio] {
     .section4>div:last-child {
         font-size: 20pt;
     }
-    .count {
-        position: absolute;
-        bottom: 110px;
-        margin-left: -5px;
-    }
     .form {
         font-size: 18pt;
         max-width: 700px;
@@ -1057,34 +1061,6 @@ input[type=radio] {
         position: relative;
         width: 100px;
         height: 90px;
-    }
-
-    .countdown-number {
-        margin: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 110px;
-        box-sizing: border-box;
-    }
-
-    .count {
-        position: relative;
-        bottom: 25px;
-        width: 60px;
-        text-align: center;
-        font-size: 4vh;
-        left: 0;
-        margin: 0!important;
-        margin-left: 0;
-        font-family: 'Open Sans Condensed', sans-serif;
-    }
-
-    .countdown {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
     }
 
     input, textarea {
@@ -1261,3 +1237,29 @@ input[type=radio] {
     opacity: 1 !important;
     right: 5% !important;
 }
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   * {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-weight: 100;
+   }
+
+   p {
+       opacity: 1 !important;
+   }
+
+   .headername p:first-child{
+       border-bottom: 0 !important;
+   }
+
+   .flowersSection > div:first-child, .flowersSection > div:last-child {
+       display: none;
+   }
+
+   .count {
+    position: relative;
+    bottom: 45px;
+   }
+
+  }

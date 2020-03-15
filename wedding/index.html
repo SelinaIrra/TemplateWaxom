@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1">
-    <title>WeddingDay</title>
+    <title>KlimchenkoTravel</title>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Open+Sans+Condensed:300|Poiret+One&display=swap"
         rel="stylesheet">
     <link href='style/onepagescroll.css' rel='stylesheet' type='text/css'>
@@ -284,40 +284,24 @@
     </div>
 </body>
 <script>
-    // if (document.body.offsetWidth > document.body.offsetHeight) {
-        onePageScroll(".container", {
-            sectionContainer: "section",
-            loop: true,
-            easing: "ease-out",
-            responsiveFallback: false,
-            controlNav: true,
-            directionNav: true,
-            updateURL: false,
-            beforeMove: function(index) {
-                if (index == 3) {
-                    $('.flexslider').flexslider({
-                        animation: "slide",
-                        slideshow: true,
-                        slideshowSpeed: 5000,
-                    });
-                }
-            }, 
-        });/* 
-    } else {
-        $('section').each((index, el) => {
-            el.classList.add("mobSection");
-        })
-        $('html').css('overflow', 'auto');
-        $('html').css('height', 'auto');
-        $('body').css('overflow', 'auto');
-        $('body').css('height', 'auto');
-        $('.flexslider').flexslider({
-            animation: "slide",
-            slideshow: true,
-            slideshowSpeed: 10000,
-        });
-    } */
-    
+    onePageScroll(".container", {
+        sectionContainer: "section",
+        loop: true,
+        easing: "ease-out",
+        responsiveFallback: false,
+        controlNav: true,
+        directionNav: true,
+        updateURL: false,
+        beforeMove: function(index) {
+            if (index == 3) {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    slideshow: true,
+                    slideshowSpeed: 5000,
+                });
+            }
+        }, 
+    });
 </script>
 </body>
 
