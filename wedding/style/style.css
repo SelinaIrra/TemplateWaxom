@@ -1158,10 +1158,12 @@ input[type=radio] {
         position: absolute;
         width: 100%;
         height: 60%;
-        background-size: 95%;
+        background-size: 95vw;
         background-position: top;
         background-repeat: no-repeat;
     }
+
+    .liner { z-index: 4;}
 }
 
 
