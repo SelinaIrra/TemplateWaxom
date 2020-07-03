@@ -139,14 +139,23 @@ function Section5(props) {
                             }}
                         onClick={(event)=>{
                             event.stopPropagation();
-                            setPersonOpen(true);
+                            setPersonOpen(event.target.getAttribute('aria-hidden') ? false : true);
                             event.stopPropagation();
                             }}
                         open={personOpen}
                     >
-                        <MenuItem key={0} value={0}> Буду один</MenuItem>
-                        <MenuItem key={1} value={1}> Буду с парой</MenuItem>
-                        <MenuItem key={2} value={2}> Буду с парой и детьми</MenuItem>
+                        <MenuItem key={0} value={0} onClick={(event) => {
+                                setPersonOpen(false);
+                                event.stopPropagation();
+                            }}> Буду один</MenuItem>
+                        <MenuItem key={1} value={1} onClick={(event) => {
+                                setPersonOpen(false);
+                                event.stopPropagation();
+                            }}> Буду с парой</MenuItem>
+                        <MenuItem key={2} value={2} onClick={(event) => {
+                                setPersonOpen(false);
+                                event.stopPropagation();
+                            }}> Буду с парой и детьми</MenuItem>
                     </Select>
                 </div>
                 <CssTextField 
@@ -163,7 +172,7 @@ function Section5(props) {
                         <Select
                             onClick={(event)=>{
                                 event.stopPropagation();
-                                setFoodOpen(true); 
+                                setFoodOpen(event.target.getAttribute('aria-hidden') ? false : true);
                                 event.stopPropagation();
                                 }}
                             open={foodOpen}
@@ -175,12 +184,30 @@ function Section5(props) {
                                 event.stopPropagation();
                                 }}
                         >
-                            <MenuItem key={0} value={"без предпочтений"}> Без предпочтений </MenuItem>
-                            <MenuItem key={1} value={"свинина"}> Свинина </MenuItem>
-                            <MenuItem key={2} value={"курица"}> Курица </MenuItem>
-                            <MenuItem key={3} value={"рыба"}> Рыба </MenuItem>
-                            <MenuItem key={4} value={"всего и побольше"}> Всего и побольше</MenuItem>
-                            <MenuItem key={5} value={"веган"}> Я веган</MenuItem>
+                            <MenuItem key={0} value={"без предпочтений"} onClick={(event) => {
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                            }}> Без предпочтений </MenuItem>
+                            <MenuItem key={1} value={"свинина"} onClick={(event) => {
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                            }}> Свинина </MenuItem>
+                            <MenuItem key={2} value={"курица"} onClick={(event) => {
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                            }}> Курица </MenuItem>
+                            <MenuItem key={3} value={"рыба"} onClick={(event) => {
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                            }}> Рыба </MenuItem>
+                            <MenuItem key={4} value={"всего и побольше"} onClick={(event) => {
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                            }}> Всего и побольше</MenuItem>
+                            <MenuItem key={5} value={"веган"} onClick={(event) => {
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                            }}> Я веган</MenuItem>
                         </Select>
                     </FormControl> 
                     <FormControl>
@@ -188,7 +215,7 @@ function Section5(props) {
                         <Select
                             onClick={(event)=>{
                                 event.stopPropagation();
-                                setDrinksOpen(true);
+                                setDrinksOpen(event.target.getAttribute('aria-hidden') ? false : true);
                                 event.stopPropagation();
                                 }}
                             open={drinkOpen}
@@ -198,15 +225,15 @@ function Section5(props) {
                                 setDrinks(event.target.value); 
                                 setDrinksOpen(false);
                                 event.stopPropagation();
-                                }}
+                            }}
                             
                         >
-                        <MenuItem key={0} value={"без предпочтений"}> Без предпочтений </MenuItem>
-                            <MenuItem key={1} value={"вино"}>Вино</MenuItem>
-                            <MenuItem key={2} value={"коньяк"}> Коньяк</MenuItem>
-                            <MenuItem key={3} value={"водка"}> Водка</MenuItem>
-                            <MenuItem key={4} value={"всего и побольше"}> Всего побольше и перемешать</MenuItem>
-                            <MenuItem key={5} value={"за рулем"}> Я за рулем</MenuItem>
+                            <MenuItem key={0} value={"без предпочтений"} onClick={(event) => {setDrinksOpen(false); event.stopPropagation();}}> Без предпочтений </MenuItem>
+                            <MenuItem key={1} value={"вино"} onClick={(event) => {setDrinksOpen(false); event.stopPropagation();}}>Вино</MenuItem>
+                            <MenuItem key={2} value={"коньяк"} onClick={(event) => {setDrinksOpen(false); event.stopPropagation();}}> Коньяк</MenuItem>
+                            <MenuItem key={3} value={"водка"}onClick={(event) => {setDrinksOpen(false); event.stopPropagation();}}> Водка</MenuItem>
+                            <MenuItem key={4} value={"всего и побольше"} onClick={(event) => {setDrinksOpen(false); event.stopPropagation();}}> Всего побольше и перемешать</MenuItem>
+                            <MenuItem key={5} value={"за рулем"} onClick={(event) => {setDrinksOpen(false); event.stopPropagation();}}> Я за рулем</MenuItem>
                         </Select>
                     </FormControl> 
                 </div>
