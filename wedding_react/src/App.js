@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import ReactFullpage from '@fullpage/react-fullpage';
+import React, { useState, useEffect } from 'react';
+import { SectionsContainer, Section } from 'react-fullpage';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Section1 from './Section1';
@@ -10,53 +10,64 @@ import Section5 from './Section5';
 import './App.css';
 
 function App() {
-  const [section, setSection] = useState(0);
-  const [api, setApi] = useState(null)
+  const [fullpage, setFullpage] = useState(true);
+  const [height, setHeight] = useState('');
 
-  const afterLoad = (origin, destination, direction) => {
-    setSection(destination.index)
-  }
-
-  const renderNavigation = () => {
-    let nav = [];
-    for (let i = 0; i < 5; i++) {
-      nav.push( i === section ? <FavoriteIcon key={i} /> : <FavoriteBorderIcon key={i} onClick={() => api.moveTo(i + 1)} />)
+  useEffect(() => {
+    let href = window.location.href.split('#');
+    if (href.length > 1)
+      window.location.href = href[0];
+    if (window.innerWidth <= 685) {
+      setHeight(window.innerHeight + 'px');
+      setFullpage(false);
     }
-    return nav;
-  }
-  
-  return (<> 
-    <ReactFullpage
-      scrollOverflow={true}
-      licenseKey="4F4DA9EF-5A634194-8AB79E5B-A0F3B7FB"
-      afterLoad={afterLoad.bind(this)}
-      render={({ state, fullpageApi }) => {
-          setApi(fullpageApi);
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <Section1 />
-              </div>
-              <div className="section">
-                <Section2 />
-              </div>
-              <div className="section">
-                <Section3 />
-              </div>
-              <div className="section">
-                <Section4 />
-              </div>
-              <div className="section">
-                <Section5 />
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
-      <div className="App-navigation">
-        {renderNavigation()}
+  }, [])
+
+  const option = {
+    sectionClassName: 'section',
+    anchors: ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour', 'sectionFive'],
+    scrollBar: false,
+    navigation: true,
+    verticalAlign: false,
+    arrowNavigation: true
+  };
+
+  return (<>
+    {fullpage && <SectionsContainer {...option}>
+      <Section>
+        <Section1 />
+      </Section>
+      <Section>
+        <Section2 />
+      </Section>
+      <Section>
+        <Section3 />
+      </Section>
+      <Section>
+        <Section4 />
+      </Section>
+      <Section>
+        <Section5 />
+      </Section>
+    </SectionsContainer>}
+    {!fullpage && <>
+      <div style={{height: height}}>
+        <Section1 />
       </div>
-    </>);
+      <div style={{height: height}}>
+        <Section2 />
+      </div>
+      <div>
+        <Section3 />
+      </div>
+      <div>
+        <Section4 />
+      </div>
+      <div>
+        <Section5 scroll={true}/>
+      </div>
+    </>}
+  </>);
 }
 
 export default App;

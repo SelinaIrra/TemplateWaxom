@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { TextField, Button } from '@material-ui/core';
-import {
-    withStyles,
-  } from '@material-ui/core/styles';
+import { TextField, Button, FormControl } from '@material-ui/core';
+import { withStyles} from '@material-ui/core/styles';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -52,7 +52,7 @@ function StyledRadio(props) {
     );
   }
 
-function Section5() {
+function Section5(props) {
 
     const [name, setName] = useState('');
     const [assent, setAssent] = useState('yes');
@@ -64,8 +64,12 @@ function Section5() {
     const [errorName, setErrorName] = useState(false)
     const [errorCouple, setErrorCouple] = useState(false);
     const [end, setEnd] = useState(null);
+    const [foodOpen, setFoodOpen] = useState(false);
+    const [personOpen, setPersonOpen] = useState(false);
+    const [drinkOpen, setDrinksOpen] = useState(false)
 
     const send = () => {
+
         if (!name) 
             setErrorName(true);
         if (persons !== 0 && !couple.length) 
@@ -90,9 +94,16 @@ function Section5() {
         })
         .then(result => {
             setEnd(true);
+            if (props.scroll) {
+                let y = document.body.clientHeight;
+                window.scrollTo(0, y)
+            }
         }).catch(error => {
-            console.log(error);
             setEnd(false);
+            if (props.scroll) {
+                let y = document.body.clientHeight;
+                window.scrollTo(0, y)
+            }
         })
     }
 
@@ -118,17 +129,25 @@ function Section5() {
                 </RadioGroup>
                 <div className="couple">
                     <p>У вас будет +1? Или +2? А может даже +3?</p>
-                    <TextField
-                        select
+                    <Select
                         value={persons}
-                        onChange={(event) => { setPersons(event.target.value); setErrorCouple(false) }}
-                        variant="outlined"
-                        size="small"
+                        onChange={(event) => { 
+                            setPersonOpen(false); 
+                            setPersons(event.target.value); 
+                            setErrorCouple(false); 
+                            event.stopPropagation();
+                            }}
+                        onClick={(event)=>{
+                            event.stopPropagation();
+                            setPersonOpen(true);
+                            event.stopPropagation();
+                            }}
+                        open={personOpen}
                     >
                         <MenuItem key={0} value={0}> Буду один</MenuItem>
                         <MenuItem key={1} value={1}> Буду с парой</MenuItem>
                         <MenuItem key={2} value={2}> Буду с парой и детьми</MenuItem>
-                    </TextField>
+                    </Select>
                 </div>
                 <CssTextField 
                     label="Имя и фамилия пары" 
@@ -136,45 +155,71 @@ function Section5() {
                     variant="outlined" 
                     value={couple} 
                     onChange={(event) => { setCouple(event.target.value); setErrorCouple(false)}}
-                    error={errorCouple}  
+                    error={errorCouple}
                 />
-                <div className="Section5-menu">          
-                    <TextField
-                        select
-                        value={food}
-                        label="Предпочтения в едете"
-                        onChange={(event) => setFood(event.target.value)}
-                        variant="outlined"
-                        size="small"
-                    >
+                <div className="Section5-menu">     
+                    <FormControl>
+                        <InputLabel id="food">Предпочтения в еде</InputLabel>    
+                        <Select
+                            onClick={(event)=>{
+                                event.stopPropagation();
+                                setFoodOpen(true); 
+                                event.stopPropagation();
+                                }}
+                            open={foodOpen}
+                            value={food}
+                            labelId="food"
+                            onChange={(event) => {
+                                setFood(event.target.value); 
+                                setFoodOpen(false);
+                                event.stopPropagation();
+                                }}
+                        >
+                            <MenuItem key={0} value={"без предпочтений"}> Без предпочтений </MenuItem>
+                            <MenuItem key={1} value={"свинина"}> Свинина </MenuItem>
+                            <MenuItem key={2} value={"курица"}> Курица </MenuItem>
+                            <MenuItem key={3} value={"рыба"}> Рыба </MenuItem>
+                            <MenuItem key={4} value={"всего и побольше"}> Всего и побольше</MenuItem>
+                            <MenuItem key={5} value={"веган"}> Я веган</MenuItem>
+                        </Select>
+                    </FormControl> 
+                    <FormControl>
+                        <InputLabel id="drinks">Предпочтения в алкоголе</InputLabel>
+                        <Select
+                            onClick={(event)=>{
+                                event.stopPropagation();
+                                setDrinksOpen(true);
+                                event.stopPropagation();
+                                }}
+                            open={drinkOpen}
+                            labelId="drinks"
+                            value={drinks}
+                            onChange={(event) => {
+                                setDrinks(event.target.value); 
+                                setDrinksOpen(false);
+                                event.stopPropagation();
+                                }}
+                            
+                        >
                         <MenuItem key={0} value={"без предпочтений"}> Без предпочтений </MenuItem>
-                        <MenuItem key={1} value={"свинина"}> Свинина </MenuItem>
-                        <MenuItem key={2} value={"курица"}> Курица </MenuItem>
-                        <MenuItem key={3} value={"рыба"}> Рыба </MenuItem>
-                        <MenuItem key={4} value={"всего и побольше"}> Всего и побольше</MenuItem>
-                        <MenuItem key={5} value={"веган"}> Я веган</MenuItem>
-                    </TextField>
-                    <TextField
-                        select
-                        value={drinks}
-                        label="Предпочтения в алкоголе"
-                        onChange={(event) => setDrinks(event.target.value)}
-                        variant="outlined"
-                        size="small"
-                    >
-                       <MenuItem key={0} value={"без предпочтений"}> Без предпочтений </MenuItem>
-                        <MenuItem key={1} value={"вино"}>Вино</MenuItem>
-                        <MenuItem key={2} value={"коньяк"}> Коньяк</MenuItem>
-                        <MenuItem key={3} value={"водка"}> Водка</MenuItem>
-                        <MenuItem key={4} value={"всего и побольше"}> Всего побольше и перемешать</MenuItem>
-                        <MenuItem key={5} value={"за рулем"}> Я за рулем</MenuItem>
-                    </TextField>
+                            <MenuItem key={1} value={"вино"}>Вино</MenuItem>
+                            <MenuItem key={2} value={"коньяк"}> Коньяк</MenuItem>
+                            <MenuItem key={3} value={"водка"}> Водка</MenuItem>
+                            <MenuItem key={4} value={"всего и побольше"}> Всего побольше и перемешать</MenuItem>
+                            <MenuItem key={5} value={"за рулем"}> Я за рулем</MenuItem>
+                        </Select>
+                    </FormControl> 
                 </div>
                 <p style={{textAlign: "center", marginTop: '8px',}}>Если у вас есть вопросы, комментарии или пожелания
                     их можно оставить в поле ниже!
                     Также, с нами всегда можно связаться
                     по телефону или в удобной для Вас соц.сети</p>
-                <textarea value={comm} onChange={(event) => setComm(event.target.value)}></textarea>
+                <CssTextField 
+                    size="small" 
+                    variant="outlined" 
+                    value={comm} 
+                    onChange={(event) => { setComm(event.target.value);}}
+                />
                 <Button variant="outlined" onClick={send} style={{marginTop: '10px'}}>Отправить</Button>
         </div>
         {end && <div className="footer">

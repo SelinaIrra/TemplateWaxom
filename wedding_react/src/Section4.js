@@ -11,14 +11,14 @@ function Section4() {
 
     useEffect(() => {
         initializeClock(deadline);   
-    })
+    }, [deadline])
 
     const getTimeRemaining = (endtime) => {
-        var t = Date.parse(endtime) - Date.parse(new Date());
-        var seconds = Math.floor((t / 1000) % 60);
-        var minutes = Math.floor((t / 1000 / 60) % 60);
-        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let t = Date.parse(endtime) - Date.parse(new Date());
+        let seconds = Math.floor((t / 1000) % 60);
+        let minutes = Math.floor((t / 1000 / 60) % 60);
+        let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
         return {
             'total': t,
             'days': days,
@@ -31,7 +31,7 @@ function Section4() {
     const initializeClock = (endtime) => {
 
         function updateClock() {
-            var t = getTimeRemaining(endtime);
+            let t = getTimeRemaining(endtime);
 
             setDays(t.days);
             setHours(('0' + t.hours).slice(-2));
@@ -44,7 +44,7 @@ function Section4() {
         }
 
         updateClock();
-        var timeinterval = setInterval(updateClock, 1000);
+        let timeinterval = setInterval(updateClock, 1000);
     }
 
     return <div className="Section4">
