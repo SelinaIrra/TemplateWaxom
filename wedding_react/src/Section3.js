@@ -77,7 +77,7 @@ function Section3() {
                     </div>
                 </div>}
         </div>
-        <Button onClick={handleNextSlide} style={{ position: "absolute", right: '10px', top: '50%' }}>
+        <Button onClick={handleNextSlide} style={{ position: "absolute", right: '10px', top: '50%', zIndex: 5 }}>
             <ArrowForwardIosIcon fontSize="large" />
         </Button>
         <div className="Section3-corner bottom"></div>
