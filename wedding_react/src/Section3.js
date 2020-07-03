@@ -17,7 +17,7 @@ function Section3() {
 
     return <div className="Section3 Section-flex">
         <div className="Section3-corner top"></div>
-        <Button onClick={handlePrevSlide} style={{ position: "absolute", left: '10px', top: '50%' }}> 
+        <Button onClick={handlePrevSlide} style={{ position: "absolute", left: '10px', top: '50%', zIndex: 5 }}> 
             <ArrowBackIosIcon fontSize="large"/>
         </Button>
         <div className="Section-flex">
