@@ -89,10 +89,6 @@ function Section5(props) {
                 guestsNames: persons === 0 ? '-' : couple
             })
         }).then(result => {
-            if (!result.ok) throw result;
-            return result.json();
-        })
-        .then(result => {
             setEnd(true);
             if (props.scroll) {
                 let y = document.body.clientHeight;
